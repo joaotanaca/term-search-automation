@@ -4,10 +4,10 @@ export const Container = styled.div<{ error?: string }>`
     font-weight: 400;
     display: inline-flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5em;
     label {
         color: #2d74ff;
-        font-size: 14px;
+        font-size: 0.85em;
         font-weight: inherit;
     }
     input {
@@ -15,9 +15,9 @@ export const Container = styled.div<{ error?: string }>`
         border: none;
         outline: none;
         background: #eaedf3;
-        border-radius: 8px;
+        border-radius: 0.5em;
         color: #364663;
-        font-size: 16px;
+        font-size: 1em;
         font-weight: inherit;
         &:disabled {
             background-color: #eaedf3;
@@ -39,7 +39,7 @@ export const Container = styled.div<{ error?: string }>`
             }
             ::after {
                 content: "${error}";
-                font-size: 14px;
+                font-size: 0.85em;
                 color: #364663;
                 font-weight: inherit;
             }
