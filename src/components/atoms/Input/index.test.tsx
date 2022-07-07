@@ -1,6 +1,4 @@
-import React from "react";
-import { fireEvent, render } from "@testing-library/react";
-import renderer from "react-test-renderer";
+import { render, fireEvent, renderer } from "@test";
 import Input from ".";
 
 const ARIAL_LABEL = "test-label";
@@ -27,7 +25,7 @@ it("must validate if the name attribute is being correctly assigned", () => {
 
 it("must validate if the disabled attribute is being correctly assigned", () => {
     const container = render(
-        <Input disabled={true} aria-label={ARIAL_LABEL} />,
+        <Input disabled={true} aria-label={ARIAL_LABEL} />
     );
     const input = container.getByLabelText(ARIAL_LABEL) as HTMLInputElement;
 
@@ -45,5 +43,3 @@ it("validate if the snapshot has the error styling", async () => {
 
     expect(container).toMatchSnapshot();
 });
-
-export {};
