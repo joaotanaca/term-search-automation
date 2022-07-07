@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useMemo } from "react";
 import { Container } from "./styles";
 
 type Props = React.DetailedHTMLProps<
@@ -6,11 +6,23 @@ type Props = React.DetailedHTMLProps<
     HTMLInputElement
 > & { label?: string; error?: string };
 
-const Input = ({ label, error, ...props }: PropsWithChildren<Props>) => {
+const Input = ({
+    label,
+    error,
+    disabled,
+    ...props
+}: PropsWithChildren<Props>) => {
+    const renderLabel = useMemo(
+        () =>
+            label && !disabled ? (
+                <label htmlFor={props.name}>{label}</label>
+            ) : null,
+        [disabled],
+    );
     return (
-        <Container error={error}>
-            {label && <label htmlFor={props.name}>{label}</label>}
-            <input {...props} />
+        <Container aria-disabled={disabled} error={error}>
+            {renderLabel}
+            <input disabled={disabled} {...props} />
         </Container>
     );
 };

@@ -19,10 +19,15 @@ export const Container = styled.div<{ error?: string }>`
         color: #364663;
         font-size: 16px;
         font-weight: inherit;
+        &:disabled {
+            background-color: #eaedf3;
+            color: #96a6c2;
+        }
     }
 
-    ${({ error }) =>
+    ${({ error, "aria-disabled": ariaDisabled }) =>
         error &&
+        !ariaDisabled &&
         css`
             label {
                 color: #ff2d2d;
