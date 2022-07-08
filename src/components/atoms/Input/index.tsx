@@ -25,7 +25,11 @@ const Input = ({
         [disabled]
     );
     return (
-        <Container aria-disabled={disabled} error={error}>
+        <Container
+            className="input-container"
+            aria-disabled={disabled}
+            error={error}
+        >
             {renderLabel}
             <input ref={inputRef} {...props} disabled={disabled} />
         </Container>
