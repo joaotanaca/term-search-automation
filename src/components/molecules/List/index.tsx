@@ -1,3 +1,4 @@
+import Icons from "@atoms/Icons";
 import { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { Container } from "./styles";
 
@@ -20,6 +21,7 @@ function List({ list, onChange }: PropsWithChildren<Props>) {
                         setSelected(item.key);
                     }}
                 >
+                    <Icons icon="process" />
                     <h1>{item.label}</h1>
                 </li>
             )),
