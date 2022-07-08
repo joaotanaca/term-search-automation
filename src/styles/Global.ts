@@ -7,7 +7,8 @@ export default createGlobalStyle`
         font-size:16px;
     }
     body{
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
 `;
