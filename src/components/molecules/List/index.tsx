@@ -21,11 +21,11 @@ function List({ list, onChange }: PropsWithChildren<Props>) {
                         setSelected(item.key);
                     }}
                 >
-                    <Icons icon="process" />
+                    <Icons icon="loading" />
                     <h1>{item.label}</h1>
                 </li>
             )),
-        []
+        [list]
     );
     useEffect(() => {
         if (selected !== null) {
