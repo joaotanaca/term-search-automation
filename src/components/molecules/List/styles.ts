@@ -10,6 +10,7 @@ export const Container = styled.ul`
     border: 1px solid #eaedf3;
     color: #364663;
     overflow: hidden;
+    box-shadow: 0px 14px 37px rgba(0, 0, 0, 0.05);
     li {
         padding-left: 10px;
         display: inline-flex;
@@ -23,6 +24,7 @@ export const Container = styled.ul`
             margin-right: 10px;
             padding: 12px 10px 12px 0;
             border-bottom: 1px solid #eaedf3;
+            line-height: 1.25em;
             word-break: break-all;
         }
         &.selected {

@@ -17,9 +17,10 @@ function App() {
                         gap: 12,
                     }}
                 >
-                    <List onChange={setSelect} list={searchTerms} />
+                    <List onChange={setSelect} list={searchTerms} arrowRight />
                     <List
                         onChange={window.open}
+                        messageError="Nenhuma url relacionada ao termo encontrada"
                         list={resultsList.slice(0, 10)}
                         icon="url"
                     />

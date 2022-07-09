@@ -1,4 +1,5 @@
 import Icons, { Icon } from "@atoms/Icons";
+import ListItem from "@atoms/ListItem";
 import { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { Container } from "./styles";
 
@@ -9,27 +10,33 @@ type Props = {
         key: string;
         icon?: Icon;
     }[];
+    arrowRight?: boolean;
+    messageError?: string;
     onChange?: (value: string) => void;
 };
 
-function List({ list, onChange, icon = "loading" }: PropsWithChildren<Props>) {
+function List({
+    list,
+    onChange,
+    icon = "loading",
+    arrowRight,
+    messageError = "Nada encontrado...",
+}: PropsWithChildren<Props>) {
     const [selected, setSelected] = useState<string | null>(null);
     const renderList = useMemo(
         () =>
-            list.map((item) => (
-                <li
-                    className={item.key === selected ? "selected" : "none"}
-                    key={item.key}
-                    onClick={() => setSelected(item.key)}
-                >
-                    <Icons
-                        color={"#96A6C2"}
-                        size={22}
+            list.map((item, index) => {
+                const active = selected ? item.key === selected : index === 0;
+                return (
+                    <ListItem
+                        active={active}
+                        arrowRight={!!arrowRight}
                         icon={item?.icon ?? icon}
+                        label={item.label}
+                        onClick={() => setSelected(item.key)}
                     />
-                    <p>{item.label}</p>
-                </li>
-            )),
+                );
+            }),
         [list, selected]
     );
     useEffect(() => {
@@ -44,7 +51,7 @@ function List({ list, onChange, icon = "loading" }: PropsWithChildren<Props>) {
                 renderList
             ) : (
                 <li>
-                    <p>Nenhum termo encontrado</p>
+                    <p>{messageError}</p>
                 </li>
             )}
         </Container>

@@ -10,10 +10,14 @@ export default createGlobalStyle`
         font-family: 'Open Sans', sans-serif;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+        background-color: #fff;
         .App{
             width: calc(100% - 40px);
             max-width: 1080px;
             margin: 0 auto;
         }
+    }
+    *{
+        transition: all 0.5s ease-out;
     }
 `;
