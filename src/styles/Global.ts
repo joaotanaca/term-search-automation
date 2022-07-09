@@ -10,5 +10,10 @@ export default createGlobalStyle`
         font-family: 'Open Sans', sans-serif;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+        .App{
+            width: calc(100% - 40px);
+            max-width: 1080px;
+            margin: 0 auto;
+        }
     }
 `;

@@ -23,8 +23,11 @@ const SearchBar = forwardRef<
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
     return (
-        <Container className={collapse ? "collapse" : ""}>
-            <form onSubmit={handleSubmit}>
+        <Container>
+            <form
+                className={collapse ? "collapse" : ""}
+                onSubmit={handleSubmit}
+            >
                 <Input placeholder="Digite um termo..." ref={inputRef} />
                 <Button type="submit">Procurar</Button>
             </form>
