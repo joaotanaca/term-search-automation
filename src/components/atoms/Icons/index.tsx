@@ -12,7 +12,8 @@ const Icons = ({
     color = "#000",
     size = 24,
 }: PropsWithChildren<Props>) => {
-    const Icon = useMemo(() => icons[icon], []);
+    const Icon = useMemo(() => icons[icon], [icon]);
+
     return <Icon color={color} size={size} />;
 };
 
