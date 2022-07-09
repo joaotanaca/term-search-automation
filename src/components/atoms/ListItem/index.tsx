@@ -17,7 +17,11 @@ const ListItem: React.FC<Props> = ({
     arrowRight,
     onClick,
 }) => (
-    <Li className={active ? "selected" : "none"} onClick={onClick}>
+    <Li
+        aria-label="list-item-component"
+        className={active ? "selected" : "none"}
+        onClick={onClick}
+    >
         <Icons size={22} icon={icon} />
         <p>{label} </p>
         {arrowRight && (

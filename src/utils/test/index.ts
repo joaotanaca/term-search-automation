@@ -1,4 +1,5 @@
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, act } from "@testing-library/react";
+
 import renderer from "react-test-renderer";
 
-export { fireEvent, render, renderer };
+export { fireEvent, render, renderer, act };

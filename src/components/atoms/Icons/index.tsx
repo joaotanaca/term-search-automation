@@ -3,7 +3,11 @@ import icons from "./svg";
 
 export type Icon = keyof typeof icons;
 
-export type IconSvgProps = { color?: string; size?: number };
+export type IconSvgProps = {
+    color?: string;
+    size?: number;
+    arialLabel?: string;
+};
 
 type Props = IconSvgProps & { icon: Icon };
 
@@ -14,7 +18,7 @@ const Icons = ({
 }: PropsWithChildren<Props>) => {
     const Icon = useMemo(() => icons[icon], [icon]);
 
-    return <Icon color={color} size={size} />;
+    return <Icon color={color} size={size} arialLabel={`${icon}-label`} />;
 };
 
 export default Icons;

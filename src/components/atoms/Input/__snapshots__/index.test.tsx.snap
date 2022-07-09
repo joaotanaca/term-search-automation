@@ -1,0 +1,62 @@
+// Vitest Snapshot v1
+
+exports[`validate if the snapshot has the error styling 1`] = `
+.c0 {
+  font-weight: 400;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.c0 label {
+  color: #2d74ff;
+  font-size: 0.85em;
+  font-weight: inherit;
+}
+
+.c0 input {
+  padding: 10px 0 10px 12px;
+  border: none;
+  outline: none;
+  background: #eaedf3;
+  border-radius: 0.5em;
+  color: #364663;
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+.c0 input:disabled {
+  background-color: #eaedf3;
+  color: #96a6c2;
+}
+
+.c0 label {
+  color: #ff2d2d;
+}
+
+.c0 input {
+  border: 1px solid #ff2d2d;
+  background-color: rgba(255,45,45,0.1);
+  color: #ff2d2d;
+}
+
+.c0::after {
+  content: "ERROR DESCRIPTION";
+  font-size: 0.85em;
+  color: #364663;
+  font-weight: inherit;
+}
+
+<div
+  className="c0 input-container"
+>
+  <input
+    aria-label="test-label"
+  />
+</div>
+`;

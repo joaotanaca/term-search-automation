@@ -29,6 +29,7 @@ function List({
                 const active = selected ? item.key === selected : index === 0;
                 return (
                     <ListItem
+                        key={item.key}
                         active={active}
                         arrowRight={!!arrowRight}
                         icon={item?.icon ?? icon}
@@ -46,7 +47,7 @@ function List({
     }, [selected]);
 
     return (
-        <Container>
+        <Container aria-label="list-component">
             {list.length ? (
                 renderList
             ) : (
