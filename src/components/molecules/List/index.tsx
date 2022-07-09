@@ -20,9 +20,7 @@ function List({ list, onChange, icon = "loading" }: PropsWithChildren<Props>) {
                 <li
                     className={item.key === selected ? "selected" : "none"}
                     key={item.key}
-                    onClick={() => {
-                        setSelected(item.key);
-                    }}
+                    onClick={() => setSelected(item.key)}
                 >
                     <Icons
                         color={"#96A6C2"}
