@@ -1,3 +1,4 @@
+import { generateMockArray } from "./generateMockArray";
 import { removeHostname } from "./removeHostname";
 import { sleep } from "./sleep";
 
@@ -15,4 +16,11 @@ it("must validate if the sleep function is paralyzing for the requested time", a
 it("must validate if the removeHostname function is correctly removing all the hostname and leaving only the information in the last slash", async () => {
     const result = removeHostname(MOCK_URL);
     expect(result).toEqual(MOCK_RESULT);
+});
+
+it("must validate if the generateMockArray function is generating arrays of the proposed size", async () => {
+    const result = generateMockArray(undefined, 100, 50);
+
+    expect(result.length).toBeGreaterThan(50);
+    expect(result.length).toBeLessThan(100);
 });

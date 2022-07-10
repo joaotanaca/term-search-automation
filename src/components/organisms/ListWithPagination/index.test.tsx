@@ -58,9 +58,10 @@ it("should validate that the right svg is rendering correctly", () => {
 });
 
 it("must validate if the amount of button is correct based on mocked values", () => {
-    const randomMaxNumber = Math.floor(Math.random() * 100) + 1;
-    const arrayList = generateMockArray(undefined, randomMaxNumber, 10);
+    const randomMaxNumber = Math.floor(Math.random() * 100) + 11;
+    const arrayList = generateMockArray(undefined, randomMaxNumber, 11);
 
+    console.log(arrayList.length);
     const container = render(<ListWithPagination list={arrayList} />);
     const containerPagination = container.getByLabelText(
         ARIAL_LABEL_PAGINATION
