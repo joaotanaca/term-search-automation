@@ -4,17 +4,21 @@ import { Li } from "@atoms/ListItem/styles";
 import { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { Container } from "./styles";
 
+export type ListItem = {
+    label: string;
+    key: string;
+    icon?: Icon;
+};
+
 type Props = {
     icon?: Icon;
-    list: {
-        label: string;
-        key: string;
-        icon?: Icon;
-    }[];
+    list: ListItem[];
     arrowRight?: boolean;
     messageError?: string;
     onChange?: (value: string) => void;
 };
+
+export type ListProps = Props;
 
 function List({
     list,
