@@ -1,4 +1,4 @@
-import { SearchTerm } from "./components/organisms/SearchTerm";
+import { SearchTerm } from "@organisms/SearchTerm";
 
 function App() {
     return (
