@@ -12,8 +12,8 @@ export default createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         background-color: #fff;
         .App{
-            width: calc(100% - 40px);
-            max-width: 1080px;
+            width: calc(100% - 20px);
+            max-width: 768px;
             margin: 0 auto;
         }
     }
