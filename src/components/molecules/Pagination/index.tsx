@@ -29,7 +29,7 @@ const Pagination = ({ length, pageSize = 10, onChange }: Props) => {
     }, [pages]);
 
     return (
-        <Container>
+        <Container aria-label="pagination-component">
             {pagesButtons.map((page) => (
                 <Button
                     key={page}

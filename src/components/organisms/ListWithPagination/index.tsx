@@ -1,11 +1,9 @@
-import List, { ListItem, ListProps } from "@molecules/List";
+import List, { ListProps } from "@molecules/List";
 import Pagination from "@molecules/Pagination";
 import { useMemo, useState } from "react";
 import { Container } from "./styles";
 
-type ListWithPaginationProps = ListProps & {
-    list: ListItem[];
-};
+type ListWithPaginationProps = ListProps;
 
 export function ListWithPagination({
     list,
@@ -30,7 +28,7 @@ export function ListWithPagination({
         [list]
     );
     return (
-        <Container>
+        <Container aria-label="list-pagination">
             <List list={listSlice} {...props} />
 
             {renderPagination}
