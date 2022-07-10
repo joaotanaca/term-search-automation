@@ -25,7 +25,10 @@ const SearchBar = forwardRef<HTMLInputElement | null, Props>(
         useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
         return (
-            <Container className={collapse ? "collapse" : ""}>
+            <Container
+                aria-label="search-bar-component"
+                className={collapse ? "collapse" : ""}
+            >
                 {title && <Head level="1">{title}</Head>}
                 <form onSubmit={handleSubmit}>
                     <Input placeholder="Digite um termo..." ref={inputRef} />

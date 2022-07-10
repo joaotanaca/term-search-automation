@@ -1,4 +1,5 @@
 import { act, render } from "@test";
+import { generateMockArray } from "@utils/helpers/generateMockArray";
 import { ListWithPagination } from ".";
 
 const ARIAL_LABEL_PAGINATION = "pagination-component";
@@ -6,17 +7,6 @@ const ARIAL_LABEL = "list-pagination";
 const ERROR = "ERROR MESSAGE";
 const MOCK_VALUE = [{ key: "value", label: "test" }];
 const MOCK_PAGE_SIZE = 10;
-
-const generatedList = (max = 10, min = 1) => {
-    const length = Math.floor(Math.random() * max) + min;
-    const arrayList = [];
-
-    for (let index = 0; index < length; index++) {
-        arrayList.push({ key: "value" + index, label: "test" });
-    }
-
-    return arrayList;
-};
 
 it("must validate if the amount of li matches the size of the mocked array", () => {
     const container = render(<ListWithPagination list={MOCK_VALUE} />);
@@ -26,7 +16,7 @@ it("must validate if the amount of li matches the size of the mocked array", () 
 });
 
 it("must validate if the amount of li matches the size of the randomly generated array", () => {
-    const arrayList = generatedList();
+    const arrayList = generateMockArray();
     const container = render(<ListWithPagination list={arrayList} />);
     const list = container.getByLabelText(ARIAL_LABEL) as HTMLUListElement;
     const liElements = list.querySelectorAll("ul li");
@@ -69,7 +59,7 @@ it("should validate that the right svg is rendering correctly", () => {
 
 it("must validate if the amount of button is correct based on mocked values", () => {
     const randomMaxNumber = Math.floor(Math.random() * 100) + 1;
-    const arrayList = generatedList(randomMaxNumber , 10);
+    const arrayList = generateMockArray(undefined, randomMaxNumber, 10);
 
     const container = render(<ListWithPagination list={arrayList} />);
     const containerPagination = container.getByLabelText(

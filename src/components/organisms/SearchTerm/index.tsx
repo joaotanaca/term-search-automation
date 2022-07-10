@@ -19,7 +19,7 @@ export function SearchTerm() {
         [resultsList]
     );
     return (
-        <Container>
+        <Container aria-label="search-term-label">
             <SearchBar
                 onSubmit={handleSubmit}
                 collapse={haveSearch}
