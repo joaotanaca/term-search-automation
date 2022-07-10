@@ -82,7 +82,6 @@ export const TermSearchProvider = ({ children }: PropsWithChildren) => {
                 setSearchTerms((prev) => {
                     const prevSearch = [...prev];
                     prevSearch[index]["icon"] = "done";
-                    console.log(prevSearch[index]);
                     
                     return prevSearch;
                 });
