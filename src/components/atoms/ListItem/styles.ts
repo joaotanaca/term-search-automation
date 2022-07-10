@@ -13,7 +13,7 @@ export const Li = styled.li`
         padding: 12px 10px 12px 0;
         border-bottom: 1px solid #eaedf3;
         line-height: 1.25em;
-        word-break: break-all;
+        word-break: break-word;
     }
     &.selected {
         background-color: rgba(45, 116, 255, 0.1);

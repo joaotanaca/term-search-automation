@@ -1,5 +1,6 @@
-import Icons, { Icon } from "@atoms/Icons";
+import { Icon } from "@atoms/Icons";
 import ListItem from "@atoms/ListItem";
+import { Li } from "@atoms/ListItem/styles";
 import { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { Container } from "./styles";
 
@@ -51,9 +52,9 @@ function List({
             {list.length ? (
                 renderList
             ) : (
-                <li>
+                <Li>
                     <p>{messageError}</p>
-                </li>
+                </Li>
             )}
         </Container>
     );
