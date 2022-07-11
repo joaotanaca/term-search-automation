@@ -70,6 +70,8 @@ $ yarn test-ui
 
 ### 🔧 Tecnologias
 
+<div id="tecnologias">
+    
 As seguintes ferramentas foram usadas na construção do projeto:
 
 -   [Node.js](https://nodejs.org/en/)
@@ -80,3 +82,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   [Axios](https://axios-http.com/ptbr/docs/intro)
 -   [testing-library](https://testing-library.com)
 -   [Vitest](https://vitest.dev)
+    
+</div>
