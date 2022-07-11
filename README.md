@@ -46,7 +46,7 @@ $ yarn start
 
 ### 🧪 Testes
 
-<div id="instalacao">
+<div id="testes">
 
 <p>Para rodar os testes basta apenas rodar</p>
 
