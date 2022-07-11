@@ -2,13 +2,11 @@
 <p align="center">Projeto para o teste técnico na AXUR, aonde é fornecido aos usuários uma interface simplificada para a automação de busca de termos em websites, utilizando APIs REST de um serviço de web crawling.</p>
 
 <br/>
-<br/>
 
 -   [Instalação e aplicação rodando](#instalacao)
 -   [Tests](#testes)
 -   [Tecnologias](#tecnologias)
 
-<br/>
 <br/>
 
 ### Pré-requisitos
@@ -16,7 +14,6 @@
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 
-<br/>
 <br/>
 
 ### 🎲 Instalação e aplicação rodando
@@ -46,7 +43,6 @@ $ yarn start
 </div>
 
 <br/>
-<br/>
 
 ### 🧪 Testes
 
@@ -66,12 +62,10 @@ $ npm run test-ui
 # ou
 $ yarn test-ui
 
-# O aplicação irá rodar na porta:3000 - acesse <http://localhost:3000>
 ```
 
 </div>
 
-<br/>
 <br/>
 
 ### 🔧 Tecnologias
